@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Button, Text, SafeAreaView, ScrollView, TouchableOpacity, View, Alert,  TextInput, Image, ActivityIndicator, Navigation} from 'react-native';
+import { StyleSheet, Button, Text, SafeAreaView, ScrollView, TouchableOpacity, View, Alert,  TextInput, Image, ActivityIndicator, Navigation, FlatList} from 'react-native';
 
 export default function HomeScreen({ navigation } ) {
   return (
@@ -42,7 +42,7 @@ export default function HomeScreen({ navigation } ) {
         <View style={styles.card}>
         <TouchableOpacity 
           style={styles.text}
-          onPress={() => navigation.navigate('ProfileTesting')}>
+          onPress={() => navigation.navigate('Arm')}>
           <Text> Arm</Text>
         </TouchableOpacity>
         </View>
@@ -50,7 +50,7 @@ export default function HomeScreen({ navigation } ) {
         <View style={styles.card}>
         <TouchableOpacity 
           style={styles.text}
-          onPress={() => navigation.navigate('ProfileTesting')}>
+          onPress={() => navigation.navigate('Chest')}>
           <Text> Chest</Text>
         </TouchableOpacity>
         </View>
@@ -58,7 +58,7 @@ export default function HomeScreen({ navigation } ) {
         <View style={styles.card}>
         <TouchableOpacity 
           style={styles.text}
-          onPress={() => navigation.navigate('ProfileTesting')}>
+          onPress={() => navigation.navigate('Shoulder')}>
           <Text> Shoulder</Text>
         </TouchableOpacity>
         </View>
@@ -66,7 +66,7 @@ export default function HomeScreen({ navigation } ) {
         <View style={styles.card}>
         <TouchableOpacity 
           style={styles.text}
-          onPress={() => navigation.navigate('ProfileTesting')}>
+          onPress={() => navigation.navigate('Back')}>
           <Text> Back</Text>
         </TouchableOpacity>
         </View>
@@ -74,7 +74,7 @@ export default function HomeScreen({ navigation } ) {
         <View style={styles.card}>
         <TouchableOpacity 
           style={styles.text}
-          onPress={() => navigation.navigate('ProfileTesting')}>
+          onPress={() => navigation.navigate('Leg')}>
           <Text> Leg</Text>
         </TouchableOpacity>
         </View>
@@ -186,3 +186,126 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
+
+
+
+
+
+
+
+
+
+function Arm({ navigation }) {
+  return(
+    <View>
+      <Text> Arm Exercises</Text>
+      <FlatList>
+        <Text> Curl ups</Text>
+        <Text> Double Curl ups</Text>
+        <Text> Hand over the shoulder be like</Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+
+      </FlatList>
+    </View>
+  )
+}
+
+function Chest({ navigation }) {
+  return(
+    <View>
+      <Text> Arm Exercises</Text>
+      <FlatList>
+        <Text> Curl ups</Text>
+        <Text> Double Curl ups</Text>
+        <Text> Hand over the shoulder be like</Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+
+      </FlatList>
+    </View>
+  )
+}
+
+function Leg({ navigation }) {
+  return(
+    <View>
+      <Text> Arm Exercises</Text>
+      <FlatList>
+        <Text> Curl ups</Text>
+        <Text> Double Curl ups</Text>
+        <Text> Hand over the shoulder be like</Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+
+      </FlatList>
+    </View>
+  )
+}
+
+function Back({ navigation }) {
+  return(
+    <View>
+      <Text> Arm Exercises</Text>
+      <FlatList>
+        <Text> Curl ups</Text>
+        <Text> Double Curl ups</Text>
+        <Text> Hand over the shoulder be like</Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+
+      </FlatList>
+    </View>
+  )
+}
+
+function abs({ navigation }) {
+  return(
+    <View>
+      <Text> Arm Exercises</Text>
+      <FlatList>
+        <Text> Curl ups</Text>
+        <Text> Double Curl ups</Text>
+        <Text> Hand over the shoulder be like</Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+        <Text></Text>
+
+      </FlatList>
+    </View>
+  )
+}

@@ -4,10 +4,12 @@ import { StyleSheet, Button, Text, SafeAreaView, TouchableOpacity,View, Alert,  
 import React from 'react';
 
 export default function Register({navigation}) {
+
+    const Submit = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    
+    }
 
   
     const handleRegister = () => {

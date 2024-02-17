@@ -1,13 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Button, Text, SafeAreaView, TouchableOpacity,View, Alert,  TextInput, Image, ActivityIndicator} from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Button, Text, SafeAreaView, TouchableOpacity, View, Alert,  TextInput, Image, ActivityIndicator, } from 'react-native';
+
 
 
 
 export default function Login({ navigation } ) {   
-  const [User, setUser] = React.useState('Username');
-  const [Password, setPassword] = React.useState('Password');
+  const [User, setUser] = useState('Username');
+  const [Password, setPassword] = useState('Password');
   
+  const [text, setText] = useState('');
+
+  const saveText = async () => {
+    try {
+      await fetch('http://localhost:3000/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ text }),
+      });
+      // Optionally handle success
+    } catch (error) {
+      console.error('Error saving text:', error);
+    }
+  };
   
     
   return (
@@ -15,8 +32,8 @@ export default function Login({ navigation } ) {
       <Text style={styles.title}>Login</Text>
       <TextInput
         style={styles.input}
-        onChangeText={setUser}
-        value={User}
+        onChangeText={setText}
+        value={text}
         placeholder="Username"  
         autoCapitalize="none"
       />
@@ -37,7 +54,7 @@ export default function Login({ navigation } ) {
 
 
 
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HomeScreen')}>
+      <TouchableOpacity style={styles.button} onPress={saveText} >
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
 

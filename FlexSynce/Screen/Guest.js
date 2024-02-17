@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Button, Text, SafeAreaView, ScrollView, TouchableOpacity, View, Alert,  TextInput, Image, ActivityIndicator, Navigation} from 'react-native';
 
-export default function HomeScreen({ navigation } ) {
+export default function Guest({ navigation } ) {
   return (
     <SafeAreaView style={styles.container}>
 
@@ -23,7 +23,13 @@ export default function HomeScreen({ navigation } ) {
         </TouchableOpacity>
       </View>
       {/*PLAN section*/}
-
+      <View style={{flexDirection: 'row', alignItems: 'center', margin: 2}}>
+        <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+          <View>
+            <Text style={{width: 50, textAlign: 'center', fontSize: 16,}}> Category</Text>
+          </View>
+        <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+      </View>
 
       {/*Category section*/}
       <View style={styles.category}>
@@ -86,16 +92,32 @@ export default function HomeScreen({ navigation } ) {
       </View>
       {/*Category section*/}
 
+      <View style={{flexDirection: 'row', alignItems: 'center', margin: 10,}}>
+        <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+          <View>
+            <Text style={{width: 50, textAlign: 'center', fontSize: 16,}}></Text>
+          </View>
+        <View style={{flex: 1, height: 1, backgroundColor: 'black'}} />
+      </View>
+
 
 
      
       
       <View style={styles.fixToText}>
-        {/* API TESTING Button*/}
+        {/* advise  Button*/}
         <TouchableOpacity 
-          style={styles.button}
+          style={styles.split}
           onPress={() => navigation.navigate('ProfileTesting')}>
-          <Text> API</Text>
+          <Text> advise</Text>
+        </TouchableOpacity>
+
+
+       {/* most click Button*/}
+        <TouchableOpacity 
+          style={styles.split}
+          onPress={() => navigation.navigate('ProfileTesting')}>
+          <Text> most click  </Text>
         </TouchableOpacity>
 
       </View>
@@ -132,13 +154,26 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'transparent',
     borderRadius: 8,
-    padding: 5,
-    height: 40,
+    padding: 10,
+    margin: 10,
+    height: 110,
+    width: 250,
+    borderWidth: 1,
+    borderColor: 'grey',
+  },
+  split: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    borderRadius: 8,
+    margin: 10,
+    height: 200,
+    width: 140,
     borderWidth: 1,
     borderColor: 'grey',
   },
   card: {
-    width: 60,
+    width: 80,
     height: 50,
     backgroundColor: 'lightblue',
     borderRadius: 10,
