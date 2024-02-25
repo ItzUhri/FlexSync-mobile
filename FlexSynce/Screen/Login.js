@@ -1,33 +1,65 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+
+>>>>>>> Stashed changes
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Button, Text, SafeAreaView, TouchableOpacity, View, Alert,  TextInput, Image, ActivityIndicator, } from 'react-native';
-
-
+import { StyleSheet, Button, Text, SafeAreaView, TouchableOpacity, View, Alert,  TextInput, Image, ActivityIndicator, ImageBase, Animated, Easing} from 'react-native';
 
 
 export default function Login({ navigation } ) {   
+<<<<<<< Updated upstream
   const [User, setUser] = useState('Username');
   const [Password, setPassword] = useState('Password');
   
   
+=======
+  const [User, setUser] = useState('');
+  const [Password, setPassword] = useState('');
+
+  const saveData= async () => {
+    const url ="";
+    let result = await fetch("https://flexsync-api.onrender.com/api/account/signup",{
+      method: "GET",
+      headers: '',
+
+    }
+    )
+  }
+>>>>>>> Stashed changes
   return (
     <View style={styles.container}>
+      <Image 
+      source={require('../assets/Image/Logo.png')}
+      style={{width: 280, height: 280}}
+      />
       <Text style={styles.title}>Login</Text>
       <TextInput
+<<<<<<< Updated upstream
         style={styles.input}
         onChangeText={setUser}
         value={User}
         placeholder="Username"  
         autoCapitalize="none"
+=======
+        style = {styles.input}
+        color = "white"
+        onChangeText={setUser}
+        value={User}
+        placeholder="Username" 
+        placeholderTextColor="rgba(255,255,255,0.5)" 
+>>>>>>> Stashed changes
       />
       <TextInput
-        style={styles.input}
+        style = {styles.input}
+        color = "white"
         onChangeText={setPassword}
         value={Password}
         placeholder="Password"
-        secureTextEntry
+        placeholderTextColor="rgba(255,255,255,0.5)" 
+        secureTextEntry = {true}
       />
 
       
@@ -39,7 +71,7 @@ export default function Login({ navigation } ) {
 
 
 
-      <TouchableOpacity style={styles.button} onPress={saveText} >
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('HomeScreen')} >
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
 
@@ -70,7 +102,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#f5f5f5',
+    backgroundColor: 'silver',
     paddingHorizontal: 20,
   },
   title: {
@@ -85,7 +117,8 @@ const styles = StyleSheet.create({
   input: {
     width: '100%',
     height: 50,
-    backgroundColor: '#ffffff',
+    backgroundColor: 'black',
+    opacity: 20,
     borderRadius: 10,
     paddingHorizontal: 15,
     marginBottom: 15,
@@ -93,14 +126,14 @@ const styles = StyleSheet.create({
   button: {
     width: '100%',
     height: 50,
-    backgroundColor: '#007bff',
+    backgroundColor: 'black',
     borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
   forgot_button: {
     height: 30,
-    marginBottom: 10,
+    marginBottom: 1,
     left: 100,
   },
   buttonText: {
@@ -113,4 +146,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   }
 });
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+
 >>>>>>> Stashed changes

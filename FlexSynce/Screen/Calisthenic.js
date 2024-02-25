@@ -2,22 +2,11 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, ScrollView } from 'react-native';
 
 
-<<<<<<< Updated upstream
-export default function Leg ({ navigation }) {
-  return (
-    <ScrollView style={styles.container}>
-      <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('Login')}>
-        <Text style={styles.buttonText}>Submit</Text>
-      </TouchableOpacity>
-    </ScrollView>
-=======
-export default function Gym ({ navigation }) {
+export default function Calisthenic ({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView
-        showsVerticalScrollIndicator={false}  
         contentContainerStyle={styles.scrollViewContent}>
-          
 
         <TouchableOpacity 
           style={styles.button}
@@ -134,7 +123,6 @@ export default function Gym ({ navigation }) {
 
     </View>
     
->>>>>>> Stashed changes
   );
 };
 
@@ -146,36 +134,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
     padding: 20,
   },
-<<<<<<< Updated upstream
-  title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
-  },
-  input: {
-    width: '100%',
-    height: 50,
-    borderWidth: 1,
-    borderColor: '#cccccc',
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    marginBottom: 20,
-  },
-  button: {
-    width: '100%',
-    height: 50,
-    backgroundColor: '#007bff',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 5,
-  },
-  buttonText: {
-    color: '#ffffff',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
-});
-=======
   button: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -183,10 +141,9 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 10,
     margin: 10,
-    height: 80,
-    width: 350,
+    height: 110,
+    width: 250,
     borderWidth: 1,
     borderColor: 'grey',
   },
 });
->>>>>>> Stashed changes

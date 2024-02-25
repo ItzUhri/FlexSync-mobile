@@ -20,6 +20,7 @@ import Profile from "./Screen/Profile";
 import ForgotPass from "./Screen/ForgotPass";
 import Guest from './Screen/Guest';
 import Testing from './Screen/Testing';
+<<<<<<< Updated upstream
 import Gym from './Screen/Gym'
 import Calisthenics from './Screen/Calisthenics '
 import Abs from "./Screen/Abs";
@@ -28,8 +29,24 @@ import Chest from "./Screen/Chest";
 import Leg from "./Screen/Leg";
 import Shoulder from "./Screen/Shoulder";
 
+=======
+import Arm from './Screen/Category/Arm';
+import Chest from './Screen/Category/Chest';
+import Back from './Screen/Category/Back';
+import Abs from './Screen/Category/Abs';
+import Leg from './Screen/Category/Leg';
+import Shoulder from './Screen/Category/Shoulder';
+import Gym from './Screen/Gym';
+import Calisthenic from './Screen/Calisthenic';
+>>>>>>> Stashed changes
 
 const Stack =createNativeStackNavigator();
+
+/* COlOR SCHEMAS
+*  GREY: #707B7C 
+*  BLACK :#C0392B
+*  RED: #000000
+*/
 export default function App() { 
   return (
     <NavigationContainer>
@@ -52,8 +69,11 @@ export default function App() {
         <Stack.Screen HeaderMode='none' name="Arm" component={Arm}/>
         <Stack.Screen HeaderMode='none' name="Chest" component={Chest}/>
         <Stack.Screen HeaderMode='none' name="Shoulder" component={Shoulder}/>
+        <Stack.Screen HeaderMode='none' name="Back" component={Back}/>
         <Stack.Screen HeaderMode='none' name="Abs" component={Abs}/>
         <Stack.Screen HeaderMode='none' name="Leg" component={Leg}/>
+        <Stack.Screen HeaderMode='none' name="Gym" component={Gym}/>
+        <Stack.Screen HeaderMode='none' name="Calisthenic" component={Calisthenic}/>
 
       </Stack.Navigator>
     </NavigationContainer>
