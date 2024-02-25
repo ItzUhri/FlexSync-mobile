@@ -1,35 +1,14 @@
-<<<<<<< Updated upstream
-=======
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert, ScrollView } from 'react-native';
 
 
-export default function ForgotPass ({ navigation }) {
+export default function Arm ({ navigation }) {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Forgot Password</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="email"
-        keyboardType="email-address"
-        autoCapitalize="none"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Old Password"
-        keyboardType="email-address"
-        autoCapitalize="none"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="New Password"
-        keyboardType="email-address"
-        autoCapitalize="none"
-      />
+    <ScrollView style={styles.container}>
       <TouchableOpacity style={styles.button}  onPress={() => navigation.navigate('Login')}>
         <Text style={styles.buttonText}>Submit</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 };
 
@@ -69,4 +48,3 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
->>>>>>> Stashed changes
