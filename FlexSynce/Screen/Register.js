@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import {
@@ -160,4 +158,3 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
 });
->>>>>>> Stashed changes

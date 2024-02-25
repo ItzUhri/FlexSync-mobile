@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Button, Text, SafeAreaView, ScrollView, TouchableOpacity, View, Alert,  TextInput, Image, ActivityIndicator, Navigation, FlatList} from 'react-native';
 
@@ -62,4 +60,3 @@ const styles = StyleSheet.create({
     fontSize: 20,
   }
 });
->>>>>>> Stashed changes
